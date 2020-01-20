@@ -10,7 +10,7 @@ export default class ItemList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            doSort: false,
+            doSort: true,
         };
     }
     sortData = () => {
@@ -26,7 +26,7 @@ export default class ItemList extends Component {
         })
         return (
             <section className='itemList'>
-                <SectionTitle title="Food List" />
+                <SectionTitle title="Explore restaurants in Helsinki" />
                 <div className='wrapper'>
                     <button className='btn' onClick={this.sortData}>
                         {this.state.doSort ? 'Sort A-Z' : 'Unsort' }
