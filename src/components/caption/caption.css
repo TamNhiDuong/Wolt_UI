@@ -1,6 +1,6 @@
 .searchbar {
   position: absolute;
-  padding-top: 5%;
+  padding-top: 7%;
   padding-left: 10%;
   z-index: 1;
 }
@@ -30,6 +30,9 @@
   color: white;
   font-weight: 900;
   border-radius: 10px;
+}
+.button:hover {
+  background-color: #b13b04;
 }
 .keyWords {
   padding-top: 10px;

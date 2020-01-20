@@ -10,6 +10,32 @@
     grid-row-gap: 2rem;
     grid-column-gap: 40px;
   }
+  .btn {
+    position: center;
+    text-align:center;
+    border-color:#ff5100;
+    margin-right: 1rem;
+    background: none;
+    border-radius: 5px;
+    color:#ff5100;
+    width: inherit;
+    height: 1.5rem;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+  }
+  .btn:hover {
+    background-color: #ff5100;
+    color: white;
+  }
+  .wrapper {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0px;
+  }
   @media screen and (min-width: 776px) {
     .itemList-center {
       width: 90vw;

@@ -6,21 +6,34 @@ import CardItem from '../cardItem/cardItem';
 
 import './itemList.css';
 
-import { FoodContext } from '../../context';
-
 export default class ItemList extends Component {
-    static contextType = FoodContext;
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            doSort: false,
+        };
+    }
+    sortData = () => {
+        this.setState({ doSort: !this.state.doSort });
+    }
     render() {
-        let { loading, items } = this.context;
+        let { loading, items, sortedItems } = this.props;
         items = items.map(item => {
+            return <CardItem key={item.name} item={item} />
+        })
+        sortedItems = sortedItems.map(item => {
             return <CardItem key={item.name} item={item} />
         })
         return (
             <section className='itemList'>
                 <SectionTitle title="Food List" />
+                <div className='wrapper'>
+                    <button className='btn' onClick={this.sortData}>
+                        {this.state.doSort ? 'Sort A-Z' : 'Unsort' }
+                    </button>
+                </div>
                 <div className="itemList-center">
-                    {loading ? <Loading /> : items}
+                    {loading ? <Loading /> : (this.state.doSort ? items : sortedItems)}
                 </div>
             </section>
         )

@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 
-import './searchBar.css';
+import './caption.css';
 
-export default class SearchBar extends Component {
+export default class Caption extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             input: '',
-            data: [],
-         };
+        };
     }
 
     handleChange = (event) => {
         this.setState({ input: event.target.value });
     }
 
-    searchData = () => {
+    searchData = (event) => {
+        alert('Submitting:' + this.state.input);
+        event.preventDefault();
     }
 
     render() {
@@ -28,9 +29,9 @@ export default class SearchBar extends Component {
                         type='text'
                         value={this.state.input}
                         onChange={this.handleChange}
-                        className='inputStyle' 
+                        className='inputStyle'
                         placeholder='what food are you looking for?'
-                        style={{paddingLeft: 10}}/>
+                        style={{ paddingLeft: 10 }} />
                     <input
                         type='submit'
                         value='Search'
@@ -38,18 +39,6 @@ export default class SearchBar extends Component {
                     >
                     </input>
                 </form>
-                <div className='keyWords'>
-                    <div className='row'>
-                        <button className='keyWord'>sushi</button>
-                        <button className='keyWord'>salad</button>
-                        <button className='keyWord'>hamburger</button>
-                    </div>
-                    <div className='row'>
-                        <button className='keyWord'>ramen</button>
-                        <button className='keyWord'>steak</button>
-                        <button className='keyWord'>asian</button>
-                    </div>
-                </div>
             </div>
         )
     }
