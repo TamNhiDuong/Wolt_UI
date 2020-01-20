@@ -1,0 +1,100 @@
+.searchbar {
+  position: absolute;
+  padding-top: 5%;
+  padding-left: 10%;
+  z-index: 1;
+}
+.title {
+  color: white;
+  font-size: 40px;
+}
+.description {
+  color: white;
+  font-weight: 150;
+  font-size: 30px;
+}
+.inputStyle {
+  width: 15rem;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+.button {
+  background-color: #ff5100;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+  width: 6rem;
+  height: 38px;
+  color: white;
+  font-weight: 900;
+  border-radius: 10px;
+}
+.keyWords {
+  padding-top: 10px;
+}
+.keyWord {
+  border-color: white;
+  margin-right: 1rem;
+  background: none;
+  border-radius: 5px;
+  color: white;
+  width: inherit;
+  height: 2rem;
+  align-content: center;
+  justify-content: space-around;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+}
+.keyWord:hover {
+  background-color: white;
+  color: black;
+}
+.row {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1040px) {
+.title {
+  padding-top: 7%;
+  font-size: 25px;
+}
+.description {
+  font-size: 15px;
+}
+.inputStyle {
+  width: 8rem;
+  height: 30px;
+}
+.button {
+  width: 4rem;
+  height: 33px;
+  font-size: 10px;
+}
+.keyWord {
+  font-size: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 1.5rem;
+}
+}
+@media screen and (max-width: 660px) {
+  .title {
+    display: none;
+  }
+  .description {
+    display: none;
+  }
+  .inputStyle {
+   display: none;
+  }
+  .button {
+    display: none;
+  }
+  .keyWords {
+    display: none;
+  }
+}
