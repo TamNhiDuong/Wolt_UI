@@ -8,7 +8,7 @@ import salad from '../../images/salad/salad.jpeg';
 
 export default function Slides() {
     return (
-        <Carousel>
+        <Carousel autoplay='true' disableEdgeSwiping='true' speed='2000' wrapAround>
             <img src={burger} alt='burger' />
             <img src={noodle} alt='noodle' />
             <img src={salad} alt='salad' />
@@ -16,6 +16,4 @@ export default function Slides() {
         </Carousel>
     )
 }
-/*
- autoplay='true' disableEdgeSwiping='true' speed='2000' wrapAround
-*/
+
