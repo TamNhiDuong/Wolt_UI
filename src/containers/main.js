@@ -17,6 +17,7 @@ export default class Main extends Component {
             sortedItems: [],
         };
     }
+
     componentDidMount() {
         const cloneData = [...loadData];
         const sortedData = cloneData.sort(function (a, b) {
@@ -30,6 +31,7 @@ export default class Main extends Component {
             sortedItems: sortedData,
         });
     }
+ 
     render() {
         return (
             <div>
